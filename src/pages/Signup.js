@@ -38,9 +38,7 @@ function SignupPage(props) {
   `;
   const [register, { loading, data }] = useMutation(LOGIN);
 
-  useEffect(() => {
-    console.log(data && data.register && data.register.errors);
-    
+  useEffect(() => {    
     setSuccess(data && data.register && data.register.success);
     let username_error =
       data &&
