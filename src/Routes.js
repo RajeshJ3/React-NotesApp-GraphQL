@@ -6,6 +6,8 @@ import IndexPage from "./pages/Index";
 import LoginPage from "./pages/Login";
 import SignupPage from "./pages/Signup";
 import VerifyAccount from "./pages/VerifyAccount";
+import ForgotPassword from "./pages/ForgotPassword";
+import PasswordReset from "./pages/PasswordReset";
 
 export default function Routes(props) {
   return (
@@ -18,12 +20,12 @@ export default function Routes(props) {
         <Route exact path="/login">
           <LoginPage />
         </Route>
-        <Route exact path="/login/forget-password">
-          <h1>Home</h1>
+        <Route exact path="/login/forgot-password">
+          <ForgotPassword />
         </Route>
-        <Route exact path="/login/reset-password">
-          <h1>Home</h1>
-        </Route>
+        <Route exact path="/login/forgot-password/confirm/:token"
+        render={(props) => <PasswordReset {...props} />}
+        />
         <Route exact path="/signup">
           <SignupPage />
         </Route>

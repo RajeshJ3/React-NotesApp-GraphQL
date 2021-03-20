@@ -97,7 +97,7 @@ function LoginPage(props) {
               </Form.Group>
               <Form.Group controlId="formBasicPassword">
                 <Form.Text className="text-muted">
-                  <Link to="/">Forget password</Link>
+                  <Link to="/login/forgot-password">Forget password</Link>
                 </Form.Text>
               </Form.Group>
               <Button
